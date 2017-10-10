@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">SnappyPark</string>
+    <string name="title_activity_maps">Carfinder</string>
+
+    <string name="toast_no_gps">Please activate GPS to park your car.</string>
+    <string name="toast_info_fixing_location">Getting your current location...</string>
+    <string name="toast_error_permission_open_app">We have no location permission. Please open the app to grant the location permission.</string>
+    <string name="toast_permission_denied">We need location permissions for the app to work. Please give us your permission! Your location information will not leave your device, we promise!</string>
+    <string name="onboarding_welcome_title">Welcome to SnappyPark</string>
+    <string name="onboarding_welcome_text">Thank you for downloading SnappyPark!\nTap on \"Next Step\" to set up the app. (Don\'t worry this will go really quick!)</string>
+    <string name="onboarding_welcome_button">Next Step</string>
+    <string name="onboarding_permission_title">Permission needed</string>
+    <string name="onboarding_permission_text">We need your permission to access your location. Please tap \"Grant Permission\" to grant us permission.</string>
+    <string name="onboarding_permission_button">Grant Permission</string>
+    <string name="onboarding_legal_title">Legal Notice</string>
+    <string name="onboard_legal_text">Tap the buttons to read the privacy policy and Terms and condtions. Then tap \"Read And Understood\" to continue.</string>
+    <string name="onboarding_legal_button">Read And Understood</string>
+    <string name="onboarding_legal_button_privacy">Privacy Policy</string>
+    <string name="onboarding_legal_button_tac">Terms And Conditions</string>
+    <string name="onboarding_tile_title">Add Quick Settings Tile</string>
+    <string name="onboarding_tile_text">Now all that is left is adding the quick settings tile and pressing "Get Started". Enjoy the app!</string>
+    <string name="onboarding_tile_button">Get Started</string>
+    <string name="quicksettings_label">Park Car</string>
+
+    <string name="notification_channel_parking_name">Parking Notifications</string>
+    <string name="notification_channel_parking_description">Show the parking status of the car</string>
+    <string name="notification_title">Car parked at</string>
+    <string name="notification_title_suffix">o\'clock</string>
+    <string name="notification_text">Tap here to find your car</string>
+    <string name="notification_action_unpark">Unpark car</string>
+    <string name="notification_action_navigate">Navigate to car</string>
+
+    <string name="map_marker_name">Your car</string>
+    <string name="menu_park_car">Park Car</string>
+    <string name="menu_locate_car">Locate Car</string>
+    <string name="menu_privacy_policy">Privacy Policy</string>
+    <string name="menu_terms_and_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="menu_about">About</string>
+</resources>
