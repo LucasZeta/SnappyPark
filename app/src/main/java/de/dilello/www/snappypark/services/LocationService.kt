@@ -47,6 +47,8 @@ class LocationService(val context: Context) {
                     context.getString(R.string.toast_no_gps),
                     Toast.LENGTH_LONG)
                     .show()
+
+            return;
         }
 
         // Inform user about location fixing process
