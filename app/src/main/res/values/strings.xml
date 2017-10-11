@@ -20,7 +20,8 @@
     <string name="onboarding_tile_title">Add Quick Settings Tile</string>
     <string name="onboarding_tile_text">Now all that is left is adding the quick settings tile and pressing "Get Started". Enjoy the app!</string>
     <string name="onboarding_tile_button">Get Started</string>
-    <string name="quicksettings_label">Park Car</string>
+    <string name="quicksettings_label_inactive">Park Car</string>
+    <string name="quicksettings_label_active">Unpark Car</string>
 
     <string name="notification_channel_parking_name">Parking Notifications</string>
     <string name="notification_channel_parking_description">Show the parking status of the car</string>
