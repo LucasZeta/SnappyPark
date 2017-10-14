@@ -29,7 +29,6 @@ class AboutActivity : AppCompatActivity() {
                 .addFeedbackAction("info@dilello.de")
                 .setAppIcon(R.mipmap.ic_launcher)
                 .setAppName(R.string.app_name)
-                .addGooglePlayStoreLink("14614946654514907543")
                 .addGitHubLink("ItsT-Mo")
                 .addFiveStarsAction()
                 .setVersionNameAsAppSubTitle()
