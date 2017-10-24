@@ -25,7 +25,7 @@ class AboutActivity : AppCompatActivity() {
                 .addWebsiteLink("https://www.dilello.de")
                 .addInstagramLink("_tmo94_")
                 .addLinkedInLink("timothy-di-lello-431b7b146")
-                .addUpdateAction()
+                .addMoreFromMeAction("ItsT-Mo")
                 .addFeedbackAction("info@dilello.de")
                 .setAppIcon(R.mipmap.ic_launcher)
                 .setAppName(R.string.app_name)
