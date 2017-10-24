@@ -28,21 +28,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var preferencesService: PreferencesService
     private lateinit var parkingService: ParkingService
 
-    private var isFabEnabled: Boolean
-        get() {
-            val fab = findViewById<FloatingActionButton>(R.id.fab_directions)
-            return fab.isEnabled
-        }
-        set(value) {
-            val fab = findViewById<FloatingActionButton>(R.id.fab_directions)
-
-            if (value == true) {
-                fab.isEnabled = true
-            } else {
-                fab.isEnabled = false
-            }
-        }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
@@ -55,7 +40,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         parkingService = ParkingService(baseContext)
 
         if (preferencesService.isCarParked == false) {
-            isFabEnabled = false
+            setFabToNavigate(false)
         }
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
@@ -145,9 +130,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 .title(getString(R.string.map_marker_name))
         carMarker = mMap.addMarker(markerOptions)
 
-        isFabEnabled = true
+        setFabToNavigate(true)
 
         moveCameraToMarker()
+    }
+
+    fun onParkFabClick(view: View) {
+        parkingService.parkCar()
     }
 
     /**
@@ -155,7 +144,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      */
     private fun removeMarker() {
         carMarker.remove()
-        isFabEnabled = false
+        setFabToNavigate(false)
     }
 
     /**
@@ -187,6 +176,19 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         if (preferencesService.isCarParked == true) {
             setMarkerToCurrentPosition()
+        }
+    }
+
+    private fun setFabToNavigate(shouldNavigate: Boolean) {
+        val navigationFab = findViewById<FloatingActionButton>(R.id.fab_directions)
+        val parkFab = findViewById<FloatingActionButton>(R.id.fab_park)
+
+        if (shouldNavigate == true) {
+            parkFab.visibility = View.GONE
+            navigationFab.visibility = View.VISIBLE
+        } else {
+            parkFab.visibility = View.VISIBLE
+            navigationFab.visibility = View.GONE
         }
     }
 }
