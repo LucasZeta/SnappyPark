@@ -23,14 +23,27 @@
     </fragment>
 
     <android.support.design.widget.FloatingActionButton
-    android:id="@+id/fab_directions"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom|end"
-    android:layout_margin="15dp"
-    android:backgroundTint="@color/color_fab_state"
-    app:borderWidth="0dp"
-    android:onClick="navigateToMarker"
-    android:src="@drawable/ic_directions"/>
+        android:id="@+id/fab_directions"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="15dp"
+        android:backgroundTint="@color/color_fab_state"
+        app:borderWidth="0dp"
+        android:onClick="navigateToMarker"
+        android:src="@drawable/ic_directions"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_park"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="15dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:borderWidth="0dp"
+        android:onClick="onParkFabClick"
+        android:src="@drawable/ic_logo"/>
 
 </android.support.design.widget.CoordinatorLayout>
